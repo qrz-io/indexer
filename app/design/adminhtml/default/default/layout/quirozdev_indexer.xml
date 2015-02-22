@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout>
+   <adminhtml_indexer_index>
+        <reference name="content">
+            <block type="quirozdev_indexer/adminhtml_indexer" name="process" />
+        </reference>
+    </adminhtml_indexer_index>
+</layout>

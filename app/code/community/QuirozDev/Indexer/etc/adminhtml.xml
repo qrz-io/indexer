@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <menu>
+        <system>
+            <children>
+                <quirozdev_indexer translate="title">
+                    <title>QDev Indexer</title>
+                    <sort_order>95</sort_order>
+                    <action>adminhtml/indexer/index</action>
+                </quirozdev_indexer>
+            </children>
+        </system>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <quirozdev_indexer translate="title" module="quirozdev_indexer">
+                                <title>QDev Indexer</title>
+                            </quirozdev_indexer>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

@@ -22,4 +22,24 @@
             </quirozdev_indexer>
         </models>
     </global>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <QuirozDev_Indexer before="Mage_Adminhtml">QuirozDev_Indexer_Adminhtml</QuirozDev_Indexer>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <adminhtml>
+        <layout>
+            <updates>
+                <quirozdev_indexer>
+                    <file>quirozdev_indexer.xml</file>
+                </quirozdev_indexer>
+            </updates>
+        </layout>
+    </adminhtml>
 </config>
