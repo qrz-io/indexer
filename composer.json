@@ -1,0 +1,15 @@
+{
+    "name": "cristian-quiroz/indexer",
+    "description": "Add buttons on the Magento admin panel to trigger re-indexes.",
+    "license": "MIT",
+    "homepage": "https://github.com/quirozdev/indexer",
+    "authors": [
+        {
+            "name": "Cristian Quiroz",
+            "email": "cris@qcas.co"
+        }
+    ],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
