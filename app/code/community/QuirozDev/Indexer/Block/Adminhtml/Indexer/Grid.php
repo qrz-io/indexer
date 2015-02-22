@@ -3,6 +3,9 @@
 class QuirozDev_Indexer_Block_Adminhtml_Indexer_Grid extends Mage_Adminhtml_Block_Widget_Grid
 {
 
+    /**  @var string */
+    protected $_massactionBlockName = 'quirozdev_indexer/adminhtml_indexer_grid_massaction';
+
     /**
      * @author Cristian Quiroz <cris@qcas.co>
      */
@@ -105,5 +108,27 @@ class QuirozDev_Indexer_Block_Adminhtml_Indexer_Grid extends Mage_Adminhtml_Bloc
     public function getRowUrl($row)
     {
         return null;
+    }
+
+    /**
+     * Add mass actions to grid
+     * @return QuirozDev_Indexer_Block_Adminhtml_Indexer_Grid
+     * @author Cristian Quiroz <cris@qcas.co>
+     */
+    protected function _prepareMassaction()
+    {
+        $this->setMassactionIdField('qdev_indexer_id');
+        $this->getMassactionBlock()->setFormFieldName('indexer_code');
+
+        $this->getMassactionBlock()->addItem(
+            'reindex',
+            array(
+                'label'    => Mage::helper('index')->__('Reindex Now'),
+                'url'      => $this->getUrl('*/*/reindex'),
+                'selected' => true,
+            )
+        );
+
+        return $this;
     }
 }
