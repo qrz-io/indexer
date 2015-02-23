@@ -3,11 +3,11 @@
     <menu>
         <system>
             <children>
-                <quirozdev_indexer translate="title">
-                    <title>QDev Indexer</title>
+                <cquiroz_indexer translate="title">
+                    <title>CQuiroz Indexer</title>
                     <sort_order>95</sort_order>
                     <action>adminhtml/indexer/index</action>
-                </quirozdev_indexer>
+                </cquiroz_indexer>
             </children>
         </system>
     </menu>
@@ -17,9 +17,9 @@
                 <children>
                     <system>
                         <children>
-                            <quirozdev_indexer translate="title" module="quirozdev_indexer">
-                                <title>QDev Indexer</title>
-                            </quirozdev_indexer>
+                            <cquiroz_indexer translate="title" module="cquiroz_indexer">
+                                <title>CQuiroz Indexer</title>
+                            </cquiroz_indexer>
                         </children>
                     </system>
                 </children>

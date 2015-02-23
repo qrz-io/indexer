@@ -1,10 +1,10 @@
 <?php
 
-class QuirozDev_Indexer_Block_Adminhtml_Indexer_Grid extends Mage_Adminhtml_Block_Widget_Grid
+class CQuiroz_Indexer_Block_Adminhtml_Indexer_Grid extends Mage_Adminhtml_Block_Widget_Grid
 {
 
     /**  @var string */
-    protected $_massactionBlockName = 'quirozdev_indexer/adminhtml_indexer_grid_massaction';
+    protected $_massactionBlockName = 'cquiroz_indexer/adminhtml_indexer_grid_massaction';
 
     /**
      * @author Cristian Quiroz <cris@qcas.co>
@@ -18,12 +18,12 @@ class QuirozDev_Indexer_Block_Adminhtml_Indexer_Grid extends Mage_Adminhtml_Bloc
     }
 
     /**
-     * @return QuirozDev_Indexer_Block_Adminhtml_Indexer_Grid
+     * @return CQuiroz_Indexer_Block_Adminhtml_Indexer_Grid
      * @author Cristian Quiroz <cris@qcas.co>
      */
     protected function _prepareCollection()
     {
-        $collection = Mage::getModel('quirozdev_indexer/indexer')->getIndexProcessCollection();
+        $collection = Mage::getModel('cquiroz_indexer/indexer')->getIndexProcessCollection();
         $this->setCollection($collection);
 
         return parent::_prepareCollection();
@@ -31,7 +31,7 @@ class QuirozDev_Indexer_Block_Adminhtml_Indexer_Grid extends Mage_Adminhtml_Bloc
 
     /**
      * Add name and description to collection elements
-     * @return QuirozDev_Indexer_Block_Adminhtml_Indexer_Grid
+     * @return CQuiroz_Indexer_Block_Adminhtml_Indexer_Grid
      * @author Cristian Quiroz <cris@qcas.co>
      */
     protected function _afterLoadCollection()
@@ -51,7 +51,7 @@ class QuirozDev_Indexer_Block_Adminhtml_Indexer_Grid extends Mage_Adminhtml_Bloc
 
     /**
      * Prepare grid columns
-     * @return QuirozDev_Indexer_Block_Adminhtml_Indexer_Grid
+     * @return CQuiroz_Indexer_Block_Adminhtml_Indexer_Grid
      * @author Cristian Quiroz <cris@qcas.co>
      */
     protected function _prepareColumns()
@@ -112,7 +112,7 @@ class QuirozDev_Indexer_Block_Adminhtml_Indexer_Grid extends Mage_Adminhtml_Bloc
 
     /**
      * Add mass actions to grid
-     * @return QuirozDev_Indexer_Block_Adminhtml_Indexer_Grid
+     * @return CQuiroz_Indexer_Block_Adminhtml_Indexer_Grid
      * @author Cristian Quiroz <cris@qcas.co>
      */
     protected function _prepareMassaction()

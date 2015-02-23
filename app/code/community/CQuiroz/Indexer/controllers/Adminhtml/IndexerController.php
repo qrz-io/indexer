@@ -1,6 +1,6 @@
 <?php
 
-class QuirozDev_Indexer_Adminhtml_IndexerController extends Mage_Adminhtml_Controller_Action
+class CQuiroz_Indexer_Adminhtml_IndexerController extends Mage_Adminhtml_Controller_Action
 {
 
     /**
@@ -8,10 +8,10 @@ class QuirozDev_Indexer_Adminhtml_IndexerController extends Mage_Adminhtml_Contr
      */
     public function indexAction()
     {
-        $this->_title($this->__('QDev Indexer'));
+        $this->_title($this->__('CQuiroz Indexer'));
 
         $this->loadLayout()
-            ->_setActiveMenu('system/quirozdev_indexer')
+            ->_setActiveMenu('system/cquiroz_indexer')
             ->renderLayout();
     }
 
@@ -57,12 +57,12 @@ class QuirozDev_Indexer_Adminhtml_IndexerController extends Mage_Adminhtml_Contr
     }
 
     /**
-     * @return QuirozDev_Indexer_Model_Indexer
+     * @return CQuiroz_Indexer_Model_Indexer
      * @author Cristian Quiroz <cris@qcas.co>
      */
     protected function getIndexer()
     {
-        return Mage::getSingleton('quirozdev_indexer/indexer');
+        return Mage::getSingleton('cquiroz_indexer/indexer');
     }
 
     /**

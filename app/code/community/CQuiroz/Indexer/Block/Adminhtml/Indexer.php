@@ -1,6 +1,6 @@
 <?php
 
-class QuirozDev_Indexer_Block_Adminhtml_Indexer extends Mage_Adminhtml_Block_Widget_Grid_Container
+class CQuiroz_Indexer_Block_Adminhtml_Indexer extends Mage_Adminhtml_Block_Widget_Grid_Container
 {
 
     /**
@@ -9,8 +9,8 @@ class QuirozDev_Indexer_Block_Adminhtml_Indexer extends Mage_Adminhtml_Block_Wid
     public function __construct()
     {
         $this->_controller = 'adminhtml_indexer';
-        $this->_blockGroup = 'quirozdev_indexer';
-        $this->_headerText = $this->__('QuirozDev Indexer');
+        $this->_blockGroup = 'cquiroz_indexer';
+        $this->_headerText = $this->__('CQuiroz Indexer');
 
         parent::__construct();
         $this->_removeButton('add');

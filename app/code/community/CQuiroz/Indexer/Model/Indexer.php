@@ -1,10 +1,10 @@
 <?php
 
 /**
- * Class QuirozDev_Indexer_Model_Indexer
+ * Class CQuiroz_Indexer_Model_Indexer
  * This class mimics functionality found in Mage_Shell_Compiler
  */
-class QuirozDev_Indexer_Model_Indexer
+class CQuiroz_Indexer_Model_Indexer
 {
     const XML_PATH_INDEX_INDEX_MODEL = 'global/index/index_model';
 
