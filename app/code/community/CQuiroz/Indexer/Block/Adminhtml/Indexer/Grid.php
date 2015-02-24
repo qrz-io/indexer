@@ -115,7 +115,7 @@ class CQuiroz_Indexer_Block_Adminhtml_Indexer_Grid extends Mage_Adminhtml_Block_
      * @return CQuiroz_Indexer_Block_Adminhtml_Indexer_Grid
      * @author Cristian Quiroz <cris@qcas.co>
      */
-    protected function _prepareMassaction()
+    protected function _prepareMassaction_disabled()
     {
         $this->setMassactionIdField('qdev_indexer_id');
         $this->getMassactionBlock()->setFormFieldName('indexer_code');
