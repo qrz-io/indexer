@@ -44,6 +44,7 @@ class CQuiroz_Indexer_Block_Adminhtml_Indexer_Grid extends Mage_Adminhtml_Block_
             }
             $item->setName($item->getIndexer()->getName());
             $item->setDescription($item->getIndexer()->getDescription());
+            $item->setId($item->getIndexerCode());
         }
 
         return parent::_afterLoadCollection();
@@ -115,7 +116,7 @@ class CQuiroz_Indexer_Block_Adminhtml_Indexer_Grid extends Mage_Adminhtml_Block_
      * @return CQuiroz_Indexer_Block_Adminhtml_Indexer_Grid
      * @author Cristian Quiroz <cris@qcas.co>
      */
-    protected function _prepareMassaction_disabled()
+    protected function _prepareMassaction()
     {
         $this->setMassactionIdField('qdev_indexer_id');
         $this->getMassactionBlock()->setFormFieldName('indexer_code');
