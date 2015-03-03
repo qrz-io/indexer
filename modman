@@ -1,0 +1,3 @@
+app/code/community/CQuiroz/Indexer                                  app/code/community/CQuiroz/Indexer/
+app/design/adminhtml/default/default/layout/cquiroz_indexer.xml     app/design/adminhtml/default/default/layout/cquiroz_indexer.xml
+app/etc/modules/CQuiroz_Indexer.xml                                 app/etc/modules/CQuiroz_Indexer.xml
