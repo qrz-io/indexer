@@ -1,6 +1,6 @@
 {
     "name": "cristian-quiroz/indexer",
-    "description": "Add buttons on the Magento admin panel to trigger re-indexes.",
+    "description": "Adds Reindex options in the admin panel. Mimics shell/indexer.php",
     "license": "MIT",
     "homepage": "https://github.com/cristian-quiroz/indexer",
     "authors": [
