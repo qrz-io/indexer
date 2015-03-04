@@ -1,22 +1,22 @@
 <?php
 
-class CQuiroz_Indexer_Adminhtml_IndexerController extends Mage_Adminhtml_Controller_Action
+class Qrz_Indexer_Adminhtml_IndexerController extends Mage_Adminhtml_Controller_Action
 {
 
     /**
-     * @author Cristian Quiroz <cris@qcas.co>
+     * @author Cristian Quiroz <cris@qrz.io>
      */
     public function indexAction()
     {
-        $this->_title($this->__('CQuiroz Indexer'));
+        $this->_title($this->__('Qrz Indexer'));
 
         $this->loadLayout()
-            ->_setActiveMenu('system/cquiroz_indexer')
+            ->_setActiveMenu('system/qrz_indexer')
             ->renderLayout();
     }
 
     /**
-     * @author Cristian Quiroz <cris@qcas.co>
+     * @author Cristian Quiroz <cris@qrz.io>
      */
     public function reindexAction()
     {
@@ -25,7 +25,7 @@ class CQuiroz_Indexer_Adminhtml_IndexerController extends Mage_Adminhtml_Control
     }
 
     /**
-     * @author Cristian Quiroz <cris@qcas.co>
+     * @author Cristian Quiroz <cris@qrz.io>
      */
     public function fullReindexAction()
     {
@@ -34,7 +34,7 @@ class CQuiroz_Indexer_Adminhtml_IndexerController extends Mage_Adminhtml_Control
 
     /**
      * @param string|array $indexerCode
-     * @author Cristian Quiroz <cris@qcas.co>
+     * @author Cristian Quiroz <cris@qrz.io>
      */
     protected function reindexAndRedirect($indexerCode)
     {
@@ -57,17 +57,17 @@ class CQuiroz_Indexer_Adminhtml_IndexerController extends Mage_Adminhtml_Control
     }
 
     /**
-     * @return CQuiroz_Indexer_Model_Indexer
-     * @author Cristian Quiroz <cris@qcas.co>
+     * @return Qrz_Indexer_Model_Indexer
+     * @author Cristian Quiroz <cris@qrz.io>
      */
     protected function getIndexer()
     {
-        return Mage::getSingleton('cquiroz_indexer/indexer');
+        return Mage::getSingleton('qrz_indexer/indexer');
     }
 
     /**
      * @return Mage_Adminhtml_Model_Session
-     * @author Cristian Quiroz <cris@qcas.co>
+     * @author Cristian Quiroz <cris@qrz.io>
      */
     protected function getSession()
     {

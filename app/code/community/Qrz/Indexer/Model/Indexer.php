@@ -1,17 +1,17 @@
 <?php
 
 /**
- * Class CQuiroz_Indexer_Model_Indexer
+ * Class Qrz_Indexer_Model_Indexer
  * This class mimics functionality found in Mage_Shell_Compiler
  */
-class CQuiroz_Indexer_Model_Indexer
+class Qrz_Indexer_Model_Indexer
 {
     const XML_PATH_INDEX_INDEX_MODEL = 'global/index/index_model';
 
     /**
      * @param string $param
      * @return array Array of messages with success/failure from reindex processes.
-     * @author Cristian Quiroz <cris@qcas.co>
+     * @author Cristian Quiroz <cris@qrz.io>
      */
     public function reindex($param = 'all')
     {
@@ -48,7 +48,7 @@ class CQuiroz_Indexer_Model_Indexer
      * @param string $string
      * @return array
      * @throws Exception
-     * @author Cristian Quiroz <cris@qcas.co>
+     * @author Cristian Quiroz <cris@qrz.io>
      */
     public function parseIndexerString($string = 'all')
     {
@@ -84,7 +84,7 @@ class CQuiroz_Indexer_Model_Indexer
 
     /**
      * @return mixed
-     * @author Cristian Quiroz <cris@qcas.co>
+     * @author Cristian Quiroz <cris@qrz.io>
      */
     public function getIndexProcessCollection()
     {
@@ -101,7 +101,7 @@ class CQuiroz_Indexer_Model_Indexer
     /**
      * Get Indexer instance
      * @return Mage_Index_Model_Indexer
-     * @author Cristian Quiroz <cris@qcas.co>
+     * @author Cristian Quiroz <cris@qrz.io>
      */
     protected function getIndexer()
     {
@@ -110,7 +110,7 @@ class CQuiroz_Indexer_Model_Indexer
 
     /**
      * @return string
-     * @author Cristian Quiroz <cris@qcas.co>
+     * @author Cristian Quiroz <cris@qrz.io>
      */
     protected function getIndexClassAlias()
     {

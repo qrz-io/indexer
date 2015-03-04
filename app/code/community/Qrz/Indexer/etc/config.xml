@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Qrz_Indexer>
+            <version>0.1.0</version>
+        </Qrz_Indexer>
+    </modules>
+    <global>
+        <helpers>
+            <qrz_indexer>
+                <class>Qrz_Indexer_Helper</class>
+            </qrz_indexer>
+        </helpers>
+        <blocks>
+            <qrz_indexer>
+                <class>Qrz_Indexer_Block</class>
+            </qrz_indexer>
+        </blocks>
+        <models>
+            <qrz_indexer>
+                <class>Qrz_Indexer_Model</class>
+            </qrz_indexer>
+        </models>
+    </global>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Qrz_Indexer before="Mage_Adminhtml">Qrz_Indexer_Adminhtml</Qrz_Indexer>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <adminhtml>
+        <layout>
+            <updates>
+                <qrz_indexer>
+                    <file>qrz_indexer.xml</file>
+                </qrz_indexer>
+            </updates>
+        </layout>
+    </adminhtml>
+</config>

@@ -1,13 +1,13 @@
 <?php
 
-class CQuiroz_Indexer_Block_Adminhtml_Indexer_Grid extends Mage_Adminhtml_Block_Widget_Grid
+class Qrz_Indexer_Block_Adminhtml_Indexer_Grid extends Mage_Adminhtml_Block_Widget_Grid
 {
 
     /**  @var string */
-    protected $_massactionBlockName = 'cquiroz_indexer/adminhtml_indexer_grid_massaction';
+    protected $_massactionBlockName = 'qrz_indexer/adminhtml_indexer_grid_massaction';
 
     /**
-     * @author Cristian Quiroz <cris@qcas.co>
+     * @author Cristian Quiroz <cris@qrz.io>
      */
     public function __construct()
     {
@@ -18,12 +18,12 @@ class CQuiroz_Indexer_Block_Adminhtml_Indexer_Grid extends Mage_Adminhtml_Block_
     }
 
     /**
-     * @return CQuiroz_Indexer_Block_Adminhtml_Indexer_Grid
-     * @author Cristian Quiroz <cris@qcas.co>
+     * @return Qrz_Indexer_Block_Adminhtml_Indexer_Grid
+     * @author Cristian Quiroz <cris@qrz.io>
      */
     protected function _prepareCollection()
     {
-        $collection = Mage::getModel('cquiroz_indexer/indexer')->getIndexProcessCollection();
+        $collection = Mage::getModel('qrz_indexer/indexer')->getIndexProcessCollection();
         $this->setCollection($collection);
 
         return parent::_prepareCollection();
@@ -31,8 +31,8 @@ class CQuiroz_Indexer_Block_Adminhtml_Indexer_Grid extends Mage_Adminhtml_Block_
 
     /**
      * Add name and description to collection elements
-     * @return CQuiroz_Indexer_Block_Adminhtml_Indexer_Grid
-     * @author Cristian Quiroz <cris@qcas.co>
+     * @return Qrz_Indexer_Block_Adminhtml_Indexer_Grid
+     * @author Cristian Quiroz <cris@qrz.io>
      */
     protected function _afterLoadCollection()
     {
@@ -52,8 +52,8 @@ class CQuiroz_Indexer_Block_Adminhtml_Indexer_Grid extends Mage_Adminhtml_Block_
 
     /**
      * Prepare grid columns
-     * @return CQuiroz_Indexer_Block_Adminhtml_Indexer_Grid
-     * @author Cristian Quiroz <cris@qcas.co>
+     * @return Qrz_Indexer_Block_Adminhtml_Indexer_Grid
+     * @author Cristian Quiroz <cris@qrz.io>
      */
     protected function _prepareColumns()
     {
@@ -104,7 +104,7 @@ class CQuiroz_Indexer_Block_Adminhtml_Indexer_Grid extends Mage_Adminhtml_Block_
     /**
      * @param mixed $row
      * @return null
-     * @author Cristian Quiroz <cris@qcas.co>
+     * @author Cristian Quiroz <cris@qrz.io>
      */
     public function getRowUrl($row)
     {
@@ -113,8 +113,8 @@ class CQuiroz_Indexer_Block_Adminhtml_Indexer_Grid extends Mage_Adminhtml_Block_
 
     /**
      * Add mass actions to grid
-     * @return CQuiroz_Indexer_Block_Adminhtml_Indexer_Grid
-     * @author Cristian Quiroz <cris@qcas.co>
+     * @return Qrz_Indexer_Block_Adminhtml_Indexer_Grid
+     * @author Cristian Quiroz <cris@qrz.io>
      */
     protected function _prepareMassaction()
     {

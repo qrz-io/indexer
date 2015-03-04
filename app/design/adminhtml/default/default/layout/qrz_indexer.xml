@@ -2,7 +2,7 @@
 <layout>
    <adminhtml_indexer_index>
         <reference name="content">
-            <block type="cquiroz_indexer/adminhtml_indexer" name="process" />
+            <block type="qrz_indexer/adminhtml_indexer" name="process" />
         </reference>
     </adminhtml_indexer_index>
 </layout>

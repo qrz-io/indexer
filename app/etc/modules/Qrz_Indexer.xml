@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <config>
     <modules>
-        <CQuiroz_Indexer>
+        <Qrz_Indexer>
             <active>true</active>
             <codePool>community</codePool>
-        </CQuiroz_Indexer>
+        </Qrz_Indexer>
     </modules>
 </config>

@@ -1,12 +1,12 @@
 {
-    "name": "cristian-quiroz/indexer",
+    "name": "qrz-io/indexer",
     "description": "Adds Reindex options in the admin panel. Mimics shell/indexer.php",
     "license": "MIT",
-    "homepage": "https://github.com/cristian-quiroz/indexer",
+    "homepage": "https://github.com/qrz-io/indexer",
     "authors": [
         {
             "name": "Cristian Quiroz",
-            "email": "cris@qcas.co"
+            "email": "cris@qrz.io"
         }
     ],
     "suggest": {
