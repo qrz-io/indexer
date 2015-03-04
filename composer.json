@@ -3,6 +3,7 @@
     "description": "Adds Reindex options in the admin panel. Mimics shell/indexer.php",
     "license": "MIT",
     "homepage": "https://github.com/cristian-quiroz/indexer",
+    "type": "magento-module",
     "authors": [
         {
             "name": "Cristian Quiroz",
