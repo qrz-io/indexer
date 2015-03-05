@@ -55,7 +55,6 @@ class Qrz_Indexer_Model_Indexer
         $processes = array();
         if ($string == 'all') {
             $collection = $this->getIndexer()->getProcessesCollection();
-            echo get_class($collection) . '12';
             foreach ($collection as $process) {
                 if ($process->getIndexer()->isVisible() === false) {
                     continue;
