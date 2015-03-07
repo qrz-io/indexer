@@ -1,4 +1,4 @@
-# Indexer
+# Qrz_Indexer
 
 Simple Magento module that adds an Admin Panel option in the System menu, just below Index Management, to trigger reindexes.
 
