@@ -82,7 +82,7 @@ class Qrz_Indexer_Model_Indexer
     }
 
     /**
-     * @return mixed
+     * @return Enterprise_Index_Model_Resource_Process_Collection
      * @author Cristian Quiroz <cris@qrz.io>
      */
     public function getIndexProcessCollection()
@@ -92,7 +92,30 @@ class Qrz_Indexer_Model_Indexer
             'enterprise_index_exclude_process_before',
             array('collection' => $collection)
         );
-        $collection->initializeSelect();
+
+        return $collection;
+    }
+
+    /**
+     * @param Enterprise_Index_Model_Resource_Process_Collection $collection
+     * @return Enterprise_Index_Model_Resource_Process_Collection
+     * @author Cristian Quiroz <cris@qrz.io>
+     */
+    public function joinMViewMetadataToIndexProcessCollection($collection)
+    {
+        $collection->join(
+            array('metadata_group' => 'enterprise_mview/metadata_group'),
+            'main_table.indexer_code = metadata_group.group_code',
+            array('metadata_group.group_id')
+        );
+
+        $collection->join(
+            array('metadata' => 'enterprise_mview/metadata'),
+            'metadata_group.group_id = metadata.group_id',
+            array('version_id' => new Zend_Db_Expr('GROUP_CONCAT(metadata.version_id)'))
+        );
+
+        $collection->getSelect()->group('group_id');
 
         return $collection;
     }

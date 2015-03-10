@@ -23,7 +23,8 @@ class Qrz_Indexer_Block_Adminhtml_Indexer_Grid extends Mage_Adminhtml_Block_Widg
      */
     protected function _prepareCollection()
     {
-        $collection = Mage::getModel('qrz_indexer/indexer')->getIndexProcessCollection();
+        $collection = $this->getQrzIndexerModel()->getIndexProcessCollection();
+        $this->getQrzIndexerModel()->joinMViewMetadataToIndexProcessCollection($collection);
         $this->setCollection($collection);
 
         return parent::_prepareCollection();
@@ -74,6 +75,16 @@ class Qrz_Indexer_Block_Adminhtml_Indexer_Grid extends Mage_Adminhtml_Block_Widg
                 'header'   => Mage::helper('index')->__('Description'),
                 'align'    => 'left',
                 'index'    => 'description',
+                'sortable' => false,
+            )
+        );
+
+        $this->addColumn(
+            'version_id',
+            array(
+                'header'   => Mage::helper('index')->__('Current Version ID'),
+                'align'    => 'left',
+                'index'    => 'version_id',
                 'sortable' => false,
             )
         );
@@ -131,5 +142,14 @@ class Qrz_Indexer_Block_Adminhtml_Indexer_Grid extends Mage_Adminhtml_Block_Widg
         );
 
         return $this;
+    }
+
+    /**
+     * @return Qrz_Indexer_Model_Indexer
+     * @author Cristian Quiroz <cris@qrz.io>
+     */
+    protected function getQrzIndexerModel()
+    {
+        return Mage::getSingleton('qrz_indexer/indexer');
     }
 }
