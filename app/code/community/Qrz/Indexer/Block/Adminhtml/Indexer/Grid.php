@@ -48,6 +48,8 @@ class Qrz_Indexer_Block_Adminhtml_Indexer_Grid extends Mage_Adminhtml_Block_Widg
             $item->setId($item->getIndexerCode());
         }
 
+        $this->getQrzIndexerModel()->addLatestVersionIdToIndexProcessCollection($this->_collection);
+
         return parent::_afterLoadCollection();
     }
 
@@ -80,9 +82,19 @@ class Qrz_Indexer_Block_Adminhtml_Indexer_Grid extends Mage_Adminhtml_Block_Widg
         );
 
         $this->addColumn(
+            'max_version_id',
+            array(
+                'header'   => Mage::helper('index')->__('Newest version ID'),
+                'align'    => 'left',
+                'index'    => 'max_version_id',
+                'sortable' => false,
+            )
+        );
+
+        $this->addColumn(
             'version_id',
             array(
-                'header'   => Mage::helper('index')->__('Current Version ID'),
+                'header'   => Mage::helper('index')->__('Last processed version ID'),
                 'align'    => 'left',
                 'index'    => 'version_id',
                 'sortable' => false,

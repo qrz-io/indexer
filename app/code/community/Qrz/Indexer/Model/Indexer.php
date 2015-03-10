@@ -112,10 +112,42 @@ class Qrz_Indexer_Model_Indexer
         $collection->join(
             array('metadata' => 'enterprise_mview/metadata'),
             'metadata_group.group_id = metadata.group_id',
-            array('version_id' => new Zend_Db_Expr('GROUP_CONCAT(metadata.version_id)'))
+            array(
+                'version_id'        => new Zend_Db_Expr('GROUP_CONCAT(metadata.version_id)'),
+                'changelog_name'    => new Zend_Db_Expr('GROUP_CONCAT(metadata.changelog_name)'),
+            )
         );
 
         $collection->getSelect()->group('group_id');
+
+        return $collection;
+    }
+
+    /**
+     * @param Enterprise_Index_Model_Resource_Process_Collection $collection
+     * @return Enterprise_Index_Model_Resource_Process_Collection
+     * @author Cristian Quiroz <cris@qrz.io>
+     */
+    public function addLatestVersionIdToIndexProcessCollection($collection)
+    {
+        $connection = $collection->getConnection();
+        foreach ($collection as $item) {
+            if ($changeLogTableNames = $item->getData('changelog_name')) {
+                $changeLogTableNameArray = explode(',', $changeLogTableNames);
+                $maxVersionIds = array();
+                foreach ($changeLogTableNameArray as $changeLogTableName) {
+                    $results = $connection->fetchAll("SELECT MAX(version_id) AS max_version_id FROM {$changeLogTableName}");
+                    if (is_array($results) && array_key_exists('0', $results)
+                        && is_array($results['0']) && array_key_exists('max_version_id', $results['0'])
+                    ) {
+                        $maxVersionIds[] = $results['0']['max_version_id'];
+                    }
+                }
+
+                $maxVersionIds = implode(',', $maxVersionIds);
+                $item->setData('max_version_id', $maxVersionIds);
+            }
+        }
 
         return $collection;
     }
