@@ -4,7 +4,7 @@
         <system>
             <children>
                 <qrz_indexer translate="title">
-                    <title>Indexer</title>
+                    <title>Qrz Indexer</title>
                     <sort_order>95</sort_order>
                     <action>adminhtml/indexer/index</action>
                 </qrz_indexer>
@@ -18,7 +18,7 @@
                     <system>
                         <children>
                             <qrz_indexer translate="title" module="qrz_indexer">
-                                <title>Indexer</title>
+                                <title>Qrz Indexer</title>
                             </qrz_indexer>
                         </children>
                     </system>
